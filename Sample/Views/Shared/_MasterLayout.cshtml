@@ -1,0 +1,73 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    
+    <title>@ViewBag.Title</title>
+    
+    <!-- Bootstrap 3.3.7 -->
+
+    <link href="@Url.Content("~/Content/bootstrap.min.css") " rel="stylesheet" />
+    <!-- Font Awesome -->
+
+    <link href="@Url.Content("~/Asset/bower_components/font-awesome/css/font-awesome.min.css")" rel="stylesheet" />
+    <!-- Ionicons -->
+
+    <link href="@Url.Content("~/Asset/bower_components/Ionicons/css/ionicons.min.css")" rel="stylesheet" />
+    <!-- Theme style -->
+
+    <link href="@Url.Content("~/Asset/dist/css/AdminLTE.min.css")" rel="stylesheet" />
+    <!-- Material Design -->
+    <link rel="stylesheet" href="@Url.Content("~/Asset/dist/css/bootstrap-material-design.min.css")">
+    <link rel="stylesheet" href="@Url.Content("~/Asset/dist/css/ripples.min.css")">
+    <link rel="stylesheet" href="@Url.Content("~/Asset/dist/css/MaterialAdminLTE.min.css")">
+    <!-- AdminLTE Skins. Choose a skin from the css/skins
+         folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet" href="@Url.Content("~/Asset/dist/css/skins/all-md-skins.min.css")">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Google Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+</head>
+<body class= "hold-transition skin-blue sidebar-mini" @ViewBag.LayoutClass>
+    <div>
+        @RenderBody()
+        <script src="@Url.Content("~/Scripts/jquery-3.4.1.min.js")"></script>
+
+        <!-- Bootstrap 3.3.7 -->
+        <script src="@Url.Content("~/Scripts/bootstrap.min.js")"></script>
+
+        <!-- Material Design -->
+        <script src="@Url.Content("~/Asset/dist/js/material.min.js")"></script>
+        <script src="@Url.Content("~/Asset/dist/js/ripples.min.js")"></script>
+        <script>
+            $.material.init();
+        </script>
+        <!-- SlimScroll -->
+        <script src="@Url.Content("~/Asset/bower_components/jquery-slimscroll/jquery.slimscroll.min.js")"></script>
+        <!-- FastClick -->
+        <!-- AdminLTE App -->
+        <script src="@Url.Content("~/Asset/dist/js/adminlte.min.js")"></script>
+
+        <!-- AdminLTE for demo purposes -->
+        <script src="@Url.Content("~/Asset/dist/js/demo.js")"></script>
+
+        <script>
+            $(document).ready(function () {
+                $('.sidebar-menu').tree()
+            })
+        </script>
+    </div>
+    @RenderSection("scripts", false)
+</body>
+</html>
